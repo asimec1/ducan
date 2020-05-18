@@ -5,13 +5,17 @@
 </head>
 <body>
 <?php     
-  function check_time($d, $ot, $ct) { 
-       return ($d >= $ot && $d <= $ct);  
-  }   
-  $d = date('H');    
-  echo "<p>Dućan je otvoren od 8h do 16h.</p>
-  <p>Sada je $d sati!</p>
-  <p>Dućan je " . (check_time($d, "8", "16") ? "otvoren" : "zatvoren") . "</p>";
+    $d = date('H'); 
+    $ot = 8;
+    $ct = 12;
+
+      function check_time($d, $ot, $ct) { 
+           return ($d >= $ot && $d <= $ct);  
+      }   
+
+      echo "<p>Dućan je otvoren od " . $ot . "h do " . $ct . "h.</p>
+      <p>Sada je $d sati!</p>
+      <p>Dućan je " . (check_time($d, $ot, $ct) ? "otvoren" : "zatvoren") . "</p>";
 ?>
 
 
