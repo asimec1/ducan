@@ -7,7 +7,7 @@
 <?php     
     $d = date('H'); 
     $ot = 8;
-    $ct = 12;
+    $ct = 16;
 
       function check_time($d, $ot, $ct) { 
            return ($d >= $ot && $d <= $ct);  
